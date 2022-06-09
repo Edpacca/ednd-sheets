@@ -9,6 +9,6 @@ import { TEST_CHARACTER } from "./data/data";
 
 <style>
     main {
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 </style>
