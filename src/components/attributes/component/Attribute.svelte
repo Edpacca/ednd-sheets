@@ -7,8 +7,8 @@
 
 <div class="attribute-wrapper">
     <div class="name">{name.substring(0, 3)}</div>
-    <div class="mod">{`${mod > 0 ? "+" : ""}${mod}`}</div>
-    <div class="value"><span class="normal">&#123;</span> {value} <span class="normal">&#125;</span></div>
+    <div class="mod num">{`${mod > 0 ? "+" : ""}${mod}`}</div>
+    <div class="value num"><span class="normal">&#123;</span> {value} <span class="normal">&#125;</span></div>
 </div>
 
 <style>
@@ -16,7 +16,6 @@
         border: 2px solid burlywood;
         border-radius: 4px;
         text-align: center;
-        margin: 0.2em;
         padding: 0.2em;
     }
 
@@ -29,7 +28,6 @@
     .mod {
         font-size: 2em;
         padding: 0.2em 0;
-        font-family: 'system-ui';
     }
 
     .value {

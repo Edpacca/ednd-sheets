@@ -30,6 +30,9 @@ import type { Skills } from "./model/Skills";
     .skills-wrapper {
         border: 2px solid burlywood;
         border-radius: 4px;
+        margin-left: 0.5em;
+        display: grid;
+        grid-template-rows: repeat(1fr);
     }
 
     .title {

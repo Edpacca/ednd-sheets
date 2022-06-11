@@ -1,14 +1,26 @@
 <script lang="ts">
     import type { Character } from "src/data/Character";
-import Attrtibutes from "../attributes/Attributes.svelte";
-import Skills from "../skills/Skills.svelte";
+    import Details from "../details/Details.svelte";
+    import Attrtibutes from "../attributes/Attributes.svelte";
+    import Skills from "../skills/Skills.svelte";
+    import Bonuses from "../bonuses/Bonuses.svelte";
     export let character: Character;
 </script>
 
 <div class="sheet-wrapper">
-    <div class="left-column">
+    <div class="attributes box">
         <Attrtibutes attributes={character.attributes}/>
         <Skills skills={character.skills} />
+        <Bonuses bonuses={character.bonuses}/>
+    </div>
+    <div class="details box">
+        <Details name={character.name} race={character.race}/>
+    </div>
+    <div class="spells box">
+        <div>Spells</div>
+    </div>
+    <div class="equipment box">
+        
     </div>
 </div>
 
@@ -16,13 +28,21 @@ import Skills from "../skills/Skills.svelte";
     .sheet-wrapper {
         border: 1px solid black;
         padding: 2em;
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0.5em;
     }
 
-    .left-column {
-        border: 1px solid black;
-        width: 50%;
+    .attributes {
         display: grid;
-        grid-template-columns: 10% 1fr 2fr;
+        grid-template-columns: 10% 1fr 20%;
+        column-gap: 0.5em;
+    }  
+    
+    .box {
+        border: 2px solid brown;
+        border-radius: 4px;
+        padding: 0.5em;
     }
 
 </style>

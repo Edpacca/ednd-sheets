@@ -1,6 +1,8 @@
 import type { Character } from "./Character";
 
 export const TEST_CHARACTER: Character = {
+    name: "Jeremiah Snagglebark",
+    race: "Forest Gnome",
     attributes: {
         str: 18,
         dex: 16,
@@ -29,5 +31,10 @@ export const TEST_CHARACTER: Character = {
         intimidation: -2,
         performance: 8,
         persuasion: 6
+    },
+
+    bonuses: {
+        initiative: 3,
+        proficiency: 2
     }
 }

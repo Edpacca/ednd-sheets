@@ -6,9 +6,3 @@ import { TEST_CHARACTER } from "./data/data";
 <main>
     <Sheet character={TEST_CHARACTER}/>
 </main>
-
-<style>
-    main {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-</style>

@@ -16,6 +16,7 @@ import type { Attributes } from "./model/Attributes";
 <style>
     .attributes-wrapper {
         display: grid;
-        grid-template-rows: repeat(6, 1fr)
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 0.5em;
     }
 </style>
