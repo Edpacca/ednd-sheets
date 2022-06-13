@@ -1,4 +1,5 @@
 import type { Character } from "./Character";
+import { SPELLS } from "../components/spells/data/data";
 
 export const TEST_CHARACTER: Character = {
     name: "Jeremiah Snagglebark",
@@ -36,5 +37,11 @@ export const TEST_CHARACTER: Character = {
     bonuses: {
         initiative: 3,
         proficiency: 2
-    }
+    },
+
+    spells: [
+        SPELLS.Fireball,
+        SPELLS.Firebolt,
+        SPELLS.Web
+    ]
 }

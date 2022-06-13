@@ -3,6 +3,7 @@
     export let race: string;
 </script>
 
+<div class="title2">Details</div>
 <div class="details-wrapper">
     <div>{name}</div>
     <div class="race num">{race}</div>
