@@ -4,6 +4,7 @@
     import Attrtibutes from "../attributes/Attributes.svelte";
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
+    import Spells from "../spells/Spells.svelte";
     export let character: Character;
 </script>
 
@@ -17,7 +18,7 @@
         <Details name={character.name} race={character.race}/>
     </div>
     <div class="spells box">
-        <div>Spells</div>
+        <Spells spells={character.spells}/>
     </div>
     <div class="equipment box">
         

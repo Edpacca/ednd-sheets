@@ -36,5 +36,7 @@ export const TEST_CHARACTER: Character = {
     bonuses: {
         initiative: 3,
         proficiency: 2
-    }
+    },
+
+    spells: []
 }

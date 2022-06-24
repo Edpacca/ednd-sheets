@@ -8,4 +8,5 @@ export type Character = {
     name: string;
     race: string;
     bonuses: Bonuses
+    spells: {}[]
 }
