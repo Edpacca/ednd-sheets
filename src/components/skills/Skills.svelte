@@ -1,11 +1,11 @@
 <script lang="ts">
     import Skill from "./component/Skill.svelte";
-import type { Skills } from "./model/Skills";
+    import type { Skills } from "./model/Skills";
     export let skills: Skills;
 </script>
 
 <div class="skills-wrapper">
-    <div class="title">Skills</div>
+    <div class="title2">Skills</div>
     <Skill name='Athletics' value={skills.athletics}/>
     <Skill name='Acrobatics' value={skills.acrobatics}/>
     <Skill name='Sleight of hand' value={skills.sleightOfHand}/>
@@ -33,12 +33,5 @@ import type { Skills } from "./model/Skills";
         margin-left: 0.5em;
         display: grid;
         grid-template-rows: repeat(1fr);
-    }
-
-    .title {
-        text-align: center;
-        font-size: 1.2em;
-        font-weight: 600;
-        color: brown;
     }
 </style>

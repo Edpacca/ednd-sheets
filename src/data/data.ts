@@ -1,4 +1,5 @@
 import type { Character } from "./Character";
+import { SPELLS } from "../components/spells/data/data";
 
 export const TEST_CHARACTER: Character = {
     name: "Jeremiah Snagglebark",

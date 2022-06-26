@@ -5,3 +5,10 @@ body {
 .num {
     font-family: 'Roboto Condensed';
 }
+
+.title2 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: brown;
+}
