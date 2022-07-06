@@ -1,16 +1,17 @@
 <script lang="ts">
-    import Bonus from './component/Bonus.svelte';
+    import ShieldSvg from '../../assets/Shield-svg.svelte';
+import Bonus from './component/Bonus.svelte';
     import type { Bonuses } from './model/Bonuses'
     export let bonuses: Bonuses;
 </script>
 
 <div class="bonus-wrapper">
-    <div class="shield-wrap">
-        <div class="shield-border"></div>
-        <div class="shield"></div>
+    <div class="ac-wrapper">
+        <ShieldSvg colorFill=burlywood colorStroke=brown/>
         <div class="ac">AC</div>
         <div class="mod modac">14</div>
     </div>
+
     <Bonus name="Initiative" mod={bonuses.initiative}/>
     <Bonus name="Proficiency" mod={bonuses.proficiency}/>
     <div class="box">
@@ -30,6 +31,10 @@
         display: grid;
         grid-template-rows: auto auto auto auto 45%;
         row-gap: 0.5em;
+    }
+
+    .ac-wrapper {
+        
     }
 
     .box {
