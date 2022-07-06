@@ -1,6 +1,6 @@
 <script lang="ts">
     import Skill from "./component/Skill.svelte";
-import type { Skills } from "./model/Skills";
+    import type { Skills } from "./model/Skills";
     export let skills: Skills;
 </script>
 

@@ -5,7 +5,9 @@
 </script>
 
 <div class="bonus-wrapper">
-    <div class="shield">
+    <div class="shield-wrap">
+        <div class="shield-border"></div>
+        <div class="shield"></div>
         <div class="ac">AC</div>
         <div class="mod modac">14</div>
     </div>
@@ -52,17 +54,37 @@
         margin-left: 0.1em;
     }
 
-    .shield {
-        border: 2px solid brown;
-        border-radius: 50% 50% 50% 50% / 12% 12% 70% 70%;
-        border-right: 3px solid brown;
-        border-left: 3px solid brown;
+    .shield-wrap {
+        position: relative;
         text-align: center;
+    }
+
+    .shield {
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        top: 2.5%;
+        left: 2.5%;
+        clip-path: polygon(50% 0%, 30% 5%, 20% 10%, 0% 27%, 13% 70%, 25% 85%, 50% 100%, 75% 85%, 87% 70%, 100% 27%, 80% 10%, 70% 5% );
         background-color: burlywood;
+        margin: auto;
+        z-index: -1;
+    }
+
+    .shield-border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        clip-path: polygon(50% 0%, 30% 5%, 20% 10%, 0% 27%, 13% 70%, 25% 85%, 50% 100%, 75% 85%, 87% 70%, 100% 27%, 80% 10%, 70% 5% );
+        background-color: brown;
+        z-index: -1;
     }
 
     .ac {
-        margin: 0.25em;
+        margin: 0.3em;
+        margin-bottom: 0;
         font-weight: 600;
     }
 
