@@ -1,10 +1,11 @@
 <script>
     export let value;
     export let name;
+    let checked;
 </script>
 
 <div class="skill-wrapper">
-    <input type="radio" class="radio"/>
+    <input type="checkbox" class="checkbox" checked={checked ? true : false}/>
     <div class="name">{name}</div>
     <div class="value num">{value > 0 ? "+" : ""}{value}</div>
 </div>
@@ -29,4 +30,32 @@
         padding: 0 1em;
         font-weight: 600;
     }
+
+    input[type="checkbox"] {
+        appearance: none;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 2px solid burlywood;
+        border-radius: 0.15em;
+        display: grid;
+        place-content: center;
+    }
+
+    input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        border-radius: 0.08em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em brown;
+    }
+
+    input[type="checkbox"]:checked::before {
+        transform: scale(1);
+    }
+
 </style>

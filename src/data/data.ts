@@ -1,3 +1,4 @@
+import { writable } from "svelte/store";
 import type { Character } from "./Character";
 import { SPELLS } from "../components/spells/data/data";
 
@@ -37,7 +38,5 @@ export const TEST_CHARACTER: Character = {
     bonuses: {
         initiative: 3,
         proficiency: 2
-    },
-
-    spells: []
+    }
 }
