@@ -1,13 +1,18 @@
 <script>
-    export let value;
+    import { proficiency } from "../../../store/characterStore";
+    export let baseValue;
     export let name;
-    let checked;
+    export let checked;
+
+    const getPrefix = (value) => value > 0 ? "+" : ""
+    const getValueString = (value) => getPrefix(value) + value;
+    
 </script>
 
 <div class="skill-wrapper">
-    <input type="checkbox" class="checkbox" checked={checked ? true : false}/>
+    <input type="checkbox" class="checkbox" bind:checked={checked} on:click={() => checked = !checked}/>
     <div class="name">{name}</div>
-    <div class="value num">{value > 0 ? "+" : ""}{value}</div>
+    <div class="value num">{checked ? getValueString(baseValue + $proficiency) : getValueString(baseValue)}</div>
 </div>
 
 <style>

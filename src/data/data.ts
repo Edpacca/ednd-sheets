@@ -1,10 +1,11 @@
-import { writable } from "svelte/store";
-import type { Character } from "./Character";
-import { SPELLS } from "../components/spells/data/data";
+import type { Character } from "../models/Character";
 
 export const TEST_CHARACTER: Character = {
     name: "Jeremiah Snagglebark",
     race: "Forest Gnome",
+    level: 2,
+    class: 'Wizard',
+
     attributes: {
         str: 18,
         dex: 16,
@@ -15,28 +16,30 @@ export const TEST_CHARACTER: Character = {
     },
 
     skills: {
-        athletics: 4,
-        acrobatics: 2,
-        sleightOfHand: 3,
-        stealth: 5,
-        arcana: 1,
-        history: 0,
-        investigation: -3,
-        nature: -2,
-        religion: 0,
-        animalHandling: 7,
-        insight: 10,
-        medicine: 1,
-        perception: 5,
-        survival: 11,
-        deception: -2,
-        intimidation: -2,
-        performance: 8,
-        persuasion: 6
+        athletics: [4, true],
+        acrobatics: [2, false],
+        sleightOfHand: [3, false],
+        stealth: [5, false],
+        arcana: [1, false],
+        history: [0, false],
+        investigation: [-3, true],
+        nature: [-2, false],
+        religion: [0, false],
+        animalHandling: [7, false],
+        insight: [10, false],
+        medicine: [1, false],
+        perception: [5, true],
+        survival: [11, false],
+        deception: [-2, false],
+        intimidation: [-2, false],
+        performance: [8, false],
+        persuasion: [6, true]
     },
 
-    bonuses: {
-        initiative: 3,
-        proficiency: 2
-    }
+    // bonuses: {
+    //     initiative: 3,
+    //     proficiency: 2
+    // },
+
+    spells: []
 }

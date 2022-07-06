@@ -1,29 +1,29 @@
 export type Skills = {
     // Str
-    athletics: number,
+    athletics: [number, boolean],
 
     // Dex
-    acrobatics: number,
-    sleightOfHand: number,
-    stealth: number,
+    acrobatics: [number, boolean],
+    sleightOfHand: [number, boolean],
+    stealth: [number, boolean],
 
     // Int
-    arcana: number,
-    history: number,
-    investigation: number,
-    nature: number,
-    religion: number,
+    arcana: [number, boolean],
+    history: [number, boolean],
+    investigation: [number, boolean],
+    nature: [number, boolean],
+    religion: [number, boolean],
 
     // Wis
-    animalHandling: number,
-    insight: number,
-    medicine: number,
-    perception: number,
-    survival: number,
+    animalHandling: [number, boolean],
+    insight: [number, boolean],
+    medicine: [number, boolean],
+    perception: [number, boolean],
+    survival: [number, boolean],
 
     // Cha
-    deception: number,
-    intimidation: number,
-    performance: number,
-    persuasion: number
+    deception: [number, boolean],
+    intimidation: [number, boolean],
+    performance: [number, boolean],
+    persuasion: [number, boolean]
 }

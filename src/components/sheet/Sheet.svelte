@@ -1,24 +1,24 @@
 <script lang="ts">
-    import type { Character } from "src/data/Character";
+    import { character } from "../../store/characterStore";
     import Details from "../details/Details.svelte";
     import Attrtibutes from "../attributes/Attributes.svelte";
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
     import Spells from "../spells/Spells.svelte";
-    export let character: Character;
+    import { getBonuses } from "../../logic/characterStats";
 </script>
 
 <div class="sheet-wrapper">
     <div class="attributes box">
-        <Attrtibutes attributes={character.attributes}/>
-        <Skills skills={character.skills} />
-        <Bonuses bonuses={character.bonuses}/>
+        <Attrtibutes attributes={$character.attributes}/>
+        <Skills skills={$character.skills} />
+        <Bonuses bonuses={getBonuses($character)}/>
     </div>
     <div class="details box">
-        <Details name={character.name} race={character.race}/>
+        <Details name={$character.name} race={$character.race}/>
     </div>
     <div class="spells box">
-        <Spells spells={character.spells}/>
+        <Spells spells={$character.spells}/>
     </div>
     <div class="equipment box">
         

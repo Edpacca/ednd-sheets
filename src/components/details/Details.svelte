@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { character } from "../../store/characterStore";
     export let name: string;
     export let race: string;
 </script>
@@ -7,12 +8,12 @@
 <div class="details-wrapper">
     <div>{name}</div>
     <div class="race num">{race}</div>
+    <div>level {$character.level} {$character.class}</div>
 </div>
 
 <style>
     .details-wrapper {
         border: 1px solid burlywood;
-        display: flex;
     }
 
     .race {
