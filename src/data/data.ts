@@ -1,3 +1,4 @@
+import { writable } from "svelte/store";
 import type { Character } from "./Character";
 
 export const TEST_CHARACTER: Character = {
@@ -38,3 +39,5 @@ export const TEST_CHARACTER: Character = {
         proficiency: 2
     }
 }
+
+export const name = writable(TEST_CHARACTER.name);
