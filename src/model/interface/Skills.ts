@@ -1,29 +1,6 @@
-import type { SkillType } from "../type/Skill"
+import type { AttributeType } from "../type/AttributeType";
 
-export interface Skills {
-    // Dex
-    acrobatics: SkillType,
-    sleightOfHand: SkillType,
-    stealth: SkillType,
+export interface CharacterSkills {
+    'Athletics': { attribute: 'str', proficient: boolean };
 
-    // Int
-    arcana: SkillType,
-    history: SkillType,
-    investigation: SkillType,
-    nature: SkillType,
-    religion: SkillType,
-
-    // Wis
-    animalHandling: SkillType,
-    insight: SkillType,
-    medicine: SkillType,
-    perception: SkillType,
-    survival: SkillType,
-
-    // Cha
-    deception: SkillType,
-    intimidation: SkillType,
-    performance: SkillType,
-    persuasion: SkillType
 }
-

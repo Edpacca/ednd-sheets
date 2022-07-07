@@ -1,5 +1,6 @@
-import type { AttributeType } from "src/model/type/Attribute";
-import type { SkillType } from "src/model/type/Skill"
+import type { Skill } from "../interface/Skill";
+import type { AttributeType } from "../type/AttributeType";
+import type { SkillType } from "../type/SkillType";
 
 export class CharacterSkills {
     acrobatics = new CharacterSkill('Acrobatics', 'str');
@@ -22,11 +23,11 @@ export class CharacterSkills {
 }
 
 class CharacterSkill {
-    readonly skill: SkillType
+    readonly skill: Skill
     proficienct: boolean;
 
-    constructor (name: string, attribute: AttributeType) {
-        this.skill = {name, attribute}
+    constructor (skill: SkillType, attribute: AttributeType) {
+        this.skill = {skill, attribute}
         this.proficienct = false;
     }
 }
