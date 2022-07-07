@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Spell } from '../model/Spell';
+    import type { Spell } from '../../../model/Spell';
     export let spell: Spell;
 </script>
 

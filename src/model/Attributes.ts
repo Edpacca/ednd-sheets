@@ -6,5 +6,3 @@ export type Attributes = {
     wis: number,
     cha: number
 }
-
-export type AttributeName = 'Strength' | 'Dexterity' | 'Constitution' | 'Intelligence' | 'Wisdom' | 'Charisma'

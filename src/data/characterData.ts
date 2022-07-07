@@ -1,4 +1,4 @@
-import type { Character } from "../models/Character";
+import type { Character } from "../model/Character";
 
 export const TEST_CHARACTER: Character = {
     name: "Jeremiah Snagglebark",

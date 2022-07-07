@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Spell as SpellType } from '../model/Spell';   
+    import type { Spell as SpellType } from '../../../model/Spell';   
     import Spell from './Spell.svelte';
     export let spells: SpellType[];
     export let level: string;
