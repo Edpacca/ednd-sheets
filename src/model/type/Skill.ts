@@ -1,7 +1,6 @@
 import type { AttributeType } from "./Attribute"
 
 export type SkillType = {
-    name: string,
-    attribute: AttributeType,
-    proficient: boolean
+    readonly name: string,
+    readonly attribute: AttributeType
 }

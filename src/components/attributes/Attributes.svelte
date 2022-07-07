@@ -1,7 +1,7 @@
 <script lang="ts">
     import { character } from "../../store/characterStore";
     import Attribute from "./component/Attribute.svelte";
-    import type { Attributes } from "../../model/Attributes";
+    import type { Attributes } from "../../model/interface/Attributes";
 
 </script>
 

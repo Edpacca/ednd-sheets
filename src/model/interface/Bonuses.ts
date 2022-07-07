@@ -1,4 +1,4 @@
-export type Bonuses = {
+export interface Bonuses {
     proficiency: number
     initiative: number,
 }

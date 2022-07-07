@@ -1,1 +1,1 @@
-export type AttributeType = 'Strength' | 'Dexterity' | 'Constitution' | 'Intelligence' | 'Wisdom' | 'Charisma'
+export type AttributeType = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha'

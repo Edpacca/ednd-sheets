@@ -1,7 +1,7 @@
 <script lang="ts">
     import ShieldSvg from '../../assets/Shield-svg.svelte';
 import Bonus from './component/Bonus.svelte';
-    import type { Bonuses } from '../../model/Bonuses'
+    import type { Bonuses } from '../../model/interface/Bonuses'
     export let bonuses: Bonuses;
 </script>
 

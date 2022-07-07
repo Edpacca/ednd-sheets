@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { AttributeName } from "../../../model/Attributes";
+    import type { AttributeName } from "../../../model/interface/Attributes";
     export let value: number;
     export let name: AttributeName;
     let mod = (value - 10) / 2;

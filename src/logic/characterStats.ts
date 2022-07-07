@@ -1,5 +1,5 @@
-import type { Bonuses } from "../model/Bonuses";
-import type { Character } from "../model/Character";
+import type { Bonuses } from "../model/interface/Bonuses";
+import type { Character } from "../model/class/Character";
 
 export function getProficiency(level: number): number {
     return Math.ceil(1 + (level / 4));

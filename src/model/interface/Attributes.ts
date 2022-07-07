@@ -1,4 +1,4 @@
-export type Attributes = {
+export interface Attributes {
     str: number,
     dex: number,
     con: number,

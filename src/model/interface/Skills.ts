@@ -1,9 +1,6 @@
-import type { SkillType } from "./type/Skill"
+import type { SkillType } from "../type/Skill"
 
-export type Skills = {
-    // Str
-    athletics: SkillType,
-
+export interface Skills {
     // Dex
     acrobatics: SkillType,
     sleightOfHand: SkillType,
