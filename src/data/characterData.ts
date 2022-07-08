@@ -1,6 +1,6 @@
-import { Character } from "../model/class/Character";
+import type { CharacterData } from "src/model/interface/CharacterData";
 
-export const TEST_CHARACTER: Character = new Character();
+export const TEST_CHARACTER: CharacterData = {
 
     name: "Jeremiah Snagglebark",
     race: "Forest Gnome",
@@ -15,5 +15,12 @@ export const TEST_CHARACTER: Character = new Character();
         int: 10,
         wis: 8,
         cha: 6
-    }
+    },
+
+    proficientSkills: [
+        'Insight',
+        'History',
+        'Investigation',
+        'Animal Handling'
+    ]
 }
