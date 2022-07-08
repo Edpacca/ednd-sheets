@@ -1,14 +1,14 @@
 export type SkillType = 
 'Athletics' |
 'Acrobatics' | 
-'Sleight of Hand' |
+'Sleight of hand' |
 'Stealth' |
-'Arcanca' |
+'Arcana' |
 'History' |
 'Investigation' |
 'Nature' |
 'Religion' |
-'Animal Handling' |
+'Animal handling' |
 'Insight' |
 'Medicine' |
 'Perception' |

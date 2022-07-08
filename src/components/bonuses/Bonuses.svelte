@@ -1,8 +1,7 @@
 <script lang="ts">
     import ShieldSvg from '../../assets/Shield-svg.svelte';
-import Bonus from './component/Bonus.svelte';
-    import type { Bonuses } from '../../model/interface/Bonuses'
-    export let bonuses: Bonuses;
+    import Bonus from './component/Bonus.svelte';
+    import { character } from '../../store/characterStore';
 </script>
 
 <div class="bonus-wrapper">
@@ -14,8 +13,8 @@ import Bonus from './component/Bonus.svelte';
         </div>
     </div>
 
-    <Bonus name="Initiative" mod={bonuses.initiative}/>
-    <Bonus name="Proficiency" mod={bonuses.proficiency}/>
+    <Bonus name="Initiative" mod={$character.initiative}/>
+    <Bonus name="Proficiency" mod={$character.proficiencyBonus}/>
     <div class="box">
         <div class="name">Speed</div>
         <div class="mod num">35<span class="unit">ft.</span></div>

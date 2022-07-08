@@ -1,6 +1,5 @@
 <script lang="ts">
-    import CharacterSpells from './component/CharacterSpells.svelte';
-    export let spells;
+    let spells = [];
 </script>
 
 <div>

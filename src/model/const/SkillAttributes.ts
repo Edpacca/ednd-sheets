@@ -1,18 +1,17 @@
-import type { Skill } from "../interface/Skill"
 import type { AttributeType } from "../type/AttributeType";
 import type { SkillType } from "../type/SkillType";
 
-export const SkillAttributes: Map <SkillType, AttributeType> = new Map([
+export const SKILL_ATTRIBUTES: Map <SkillType, AttributeType> = new Map([
     ['Athletics', 'str' ],
     ['Acrobatics', 'dex'],
-    ['Sleight of Hand', 'dex'],
+    ['Sleight of hand', 'dex'],
     ['Stealth', 'dex'],
-    ['Arcanca', 'int'],
+    ['Arcana', 'int'],
     ['History', 'int'],
     ['Investigation', 'int'],
     ['Nature', 'int'],
     ['Religion', 'int'],
-    ['Animal Handling', 'wis'],
+    ['Animal handling', 'wis'],
     ['Insight', 'wis'],
     ['Medicine', 'wis'],
     ['Perception', 'wis'],
@@ -22,3 +21,4 @@ export const SkillAttributes: Map <SkillType, AttributeType> = new Map([
     ['Performance', 'cha'],
     ['Persuasion', 'cha']
 ]); 
+

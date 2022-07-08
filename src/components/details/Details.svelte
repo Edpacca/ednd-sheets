@@ -1,13 +1,11 @@
 <script lang="ts">
     import { character } from "../../store/characterStore";
-    export let name: string;
-    export let race: string;
 </script>
 
 <div class="title2">Details</div>
 <div class="details-wrapper">
-    <div>{name}</div>
-    <div class="race num">{race}</div>
+    <div>{$character.name}</div>
+    <div class="race num">{$character.race}</div>
     <div>level {$character.level} {$character.class}</div>
 </div>
 

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { AttributeName } from "../../../model/interface/Attributes";
+    import { calcAttributeBonus } from "../../../logic/characterStats";
     export let value: number;
-    export let name: AttributeName;
-    let mod = (value - 10) / 2;
+    export let name: string;
+    let mod = calcAttributeBonus(value);
 </script>
 
 <div class="attribute-wrapper">

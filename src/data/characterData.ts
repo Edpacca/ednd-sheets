@@ -1,3 +1,4 @@
+
 import type { CharacterData } from "src/model/interface/CharacterData";
 
 export const TEST_CHARACTER: CharacterData = {
@@ -9,18 +10,18 @@ export const TEST_CHARACTER: CharacterData = {
     speed: 25,
 
     attributes: {
-        str: 18,
-        dex: 16,
-        con: 12,
-        int: 10,
-        wis: 8,
-        cha: 6
+        str: 9,
+        dex: 12,
+        con: 14,
+        int: 20,
+        wis: 14,
+        cha: 12
     },
 
     proficientSkills: [
         'Insight',
         'History',
         'Investigation',
-        'Animal Handling'
+        'Animal handling'
     ]
 }
