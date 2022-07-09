@@ -1,0 +1,20 @@
+export interface Skills {
+    'Athletics': boolean,
+    'Acrobatics': boolean,
+    'Sleight of hand': boolean,
+    'Stealth': boolean,
+    'Arcana': boolean,
+    'History': boolean,
+    'Investigation': boolean,
+    'Nature': boolean,
+    'Religion': boolean,
+    'Animal handling': boolean,
+    'Insight': boolean,
+    'Medicine': boolean,
+    'Perception': boolean,
+    'Survival': boolean,
+    'Deception': boolean,
+    'Intimidation': boolean,
+    'Performance': boolean,
+    'Persuasion': boolean
+}

@@ -2,7 +2,6 @@
     import { character } from "../../../store/characterStore";
     export let value;
     export let skill;
-    export let proficient;
 
     const getPrefix = (value) => value > 0 ? "+" : "";
     const getValueString = (value) => getPrefix(value) + value;
@@ -10,9 +9,10 @@
 </script>
 
 <div class="skill-wrapper">
-    <input type="checkbox" class="checkbox" bind:checked={proficient} on:click={() => $character.setProficiency(skill, !proficient)}/>
+    <input type="checkbox" class="checkbox" bind:value={$character.skills[skill]}/>
     <div class="name">{skill}</div>
     <div class="value num">{getValueString(value)}</div>
+    <div>{$character.skills[skill]}</div>
 </div>
 
 <style>

@@ -1,6 +1,6 @@
 import { Writable, writable } from 'svelte/store';
-
 import { TEST_CHARACTER } from '../data/characterData';
-import { Character } from '../model/class/Character';
+import { generateCharacterSheetData } from '../logic/generateCharacterSheetData';
+import type { CharacterSheetData } from '../model/interface/CharacterSheetData';
 
-export const character: Writable<Character> = writable(new Character(TEST_CHARACTER));
+export const character: Writable<CharacterSheetData> = writable(generateCharacterSheetData(TEST_CHARACTER));

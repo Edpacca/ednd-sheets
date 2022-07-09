@@ -1,6 +1,6 @@
 <script lang="ts">
     import Details from "../details/Details.svelte";
-    import Attrtibutes from "../attributes/Attributes.svelte";
+    import Attributes from "../attributes/Attributes.svelte";
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
     import Spells from "../spells/Spells.svelte";
@@ -9,7 +9,7 @@
 
 <div class="sheet-wrapper">
     <div class="attributes box">
-        <Attrtibutes/>
+        <Attributes/>
         <Skills/>
         <Bonuses/>
     </div>
@@ -22,9 +22,6 @@
     <div class="equipment box">
         
     </div>
-</div>
-<div>
-    <div>{$character.skills['History']}</div>
 </div>
 
 <style>

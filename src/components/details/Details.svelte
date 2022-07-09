@@ -7,6 +7,7 @@
     <div>{$character.name}</div>
     <div class="race num">{$character.race}</div>
     <div>level {$character.level} {$character.class}</div>
+    <input type="text" bind:value={$character.name}/>
 </div>
 
 <style>
