@@ -5,7 +5,7 @@
     let mod = calcAttributeBonus(value);
 </script>
 
-<div class="attribute-wrapper">
+<div class="attribute-wrapper bordered">
     <div class="name">{name.substring(0, 3)}</div>
     <div class="mod num">{`${mod > 0 ? "+" : ""}${mod}`}</div>
     <div class="value num"><span class="normal">&#123;</span> {value} <span class="normal">&#125;</span></div>
@@ -13,8 +13,6 @@
 
 <style>
     .attribute-wrapper {
-        border: 2px solid burlywood;
-        border-radius: 4px;
         text-align: center;
         padding: 0.2em;
     }

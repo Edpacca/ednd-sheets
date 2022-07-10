@@ -12,6 +12,9 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
         class: data.class,
         proficiencyBonus: calcProficiency(data.level),
         initiative: calcAttributeBonus(data.attributes.dex),
+        hpMax: data.hpMax,
+        hpCurrent: data.hpCurrent,
+        inspired: data.inspired,
 
         attributes: {
             'str': data.attributes.str, 

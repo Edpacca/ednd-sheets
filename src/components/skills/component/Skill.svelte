@@ -9,10 +9,9 @@
 </script>
 
 <div class="skill-wrapper">
-    <input type="checkbox" class="checkbox" bind:value={$character.skills[skill]}/>
+    <input type="checkbox" class="checkbox" bind:checked={$character.skills[skill]}/>
     <div class="name">{skill}</div>
     <div class="value num">{getValueString(value)}</div>
-    <div>{$character.skills[skill]}</div>
 </div>
 
 <style>

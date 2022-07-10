@@ -19,7 +19,7 @@
         <div class="name">Speed</div>
         <div class="mod num">35<span class="unit">ft.</span></div>
     </div>
-    <div class="box">
+    <div class="box bordered">
         <div class="name">Defenses</div>
         <div class="">Poison</div>
         <div class="name">Immunities</div>
@@ -46,8 +46,6 @@
     }
 
     .box {
-        border: 2px solid burlywood;
-        border-radius: 4px;
         text-align: center;
         padding: 0.25em;
     }

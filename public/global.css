@@ -2,7 +2,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.num {
+.num, .detail {
     font-family: 'Roboto Condensed';
 }
 
@@ -11,4 +11,9 @@ body {
     font-size: 1.2em;
     font-weight: 600;
     color: brown;
+}
+
+.bordered {
+    border: 2px solid burlywood;
+    border-radius: 4px;
 }

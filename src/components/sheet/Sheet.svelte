@@ -26,10 +26,9 @@
 
 <style>
     .sheet-wrapper {
-        border: 1px solid black;
         padding: 2em;
         display: grid; 
-        grid-template-columns: 35% repeat(3, 1fr);
+        grid-template-columns: repeat(2, 50%);
         column-gap: 0.5em;
     }
 

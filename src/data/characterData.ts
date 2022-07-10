@@ -8,6 +8,8 @@ export const TEST_CHARACTER: CharacterData = {
     level: 2,
     class: 'Wizard',
     speed: 25,
+    hpMax: 19,
+    hpCurrent: 11,
 
     attributes: {
         str: 9,

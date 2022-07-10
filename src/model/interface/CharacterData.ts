@@ -10,4 +10,7 @@ export interface CharacterData {
     speed: number;
     attributes: Attributes;
     proficientSkills: SkillType[];
+    hpMax: number;
+    hpCurrent: number;
+    inspired: boolean;
 }

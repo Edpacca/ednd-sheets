@@ -12,4 +12,7 @@ export interface CharacterSheetData {
     readonly initiative: number
     attributes: Attributes;
     skills: Skills;
+    hpMax: number;
+    hpCurrent: number;
+    inspired: boolean;
 }
