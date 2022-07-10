@@ -6,13 +6,13 @@
 <div class="spell-wrapper">
     <div class="name">{spell.name}</div>
     <div class="level detail">
-        {#if spell.level === 0}
+        ({#if spell.level === 0}
             cantrip
         {:else}
             <SpellLevel level={spell.level}/>
-        {/if}
+        {/if})
     </div>
-    <div class="source">{spell.source}</div>
+    <div class="source {spell.source}">{spell.source}</div>
 </div>
 
 <style>
@@ -23,11 +23,11 @@
     }
 
     .name {
+        margin-right: 0.5em;
     }
 
     .level {
         font-size: 0.8em;
-        margin-left: auto;
     }
 
     .source {
@@ -35,4 +35,15 @@
         font-style: italic;
         font-size: 0.8em;
     }
+
+    .PHB { color: brown }
+    .EGW { color: forestgreen }
+    .FTD { color: red }
+    .GGR { color: purple }
+    .IDRotF { color: lightblue }
+    .SCC { color: blue }
+    .TCE { color: darkgoldenrod }
+    .XGE { color: orange }
+    .AI { color: palegreen }
+
 </style>

@@ -8,7 +8,8 @@
             "PHB",
             "SCC",
             "TCE",
-            "XGE"
+            "XGE",
+            "AI"
         ]
 
     let spellData = [];

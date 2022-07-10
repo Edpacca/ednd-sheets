@@ -9,3 +9,5 @@ export const getSkillBonus = (skill: SkillType, character: CharacterSheetData): 
     const mod = calcAttributeBonus(character.attributes[SKILL_ATTRIBUTES.get(skill)]);
     return mod + bonus;
 }
+
+export const sortSpellsByLevel = (spells) => spells.sort((a, b) => a.level < b.level ? -1 : a.level > b.level ? 1 : 0);
