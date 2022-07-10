@@ -13,6 +13,12 @@ body {
     color: brown;
 }
 
+.title3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: brown;
+}
+
 .bordered {
     border: 2px solid burlywood;
     border-radius: 4px;

@@ -10,6 +10,7 @@ export const TEST_CHARACTER: CharacterData = {
     speed: 25,
     hpMax: 19,
     hpCurrent: 11,
+    inspired: false,
 
     attributes: {
         str: 9,
@@ -25,5 +26,7 @@ export const TEST_CHARACTER: CharacterData = {
         'History',
         'Investigation',
         'Animal handling'
-    ]
+    ],
+
+    spells: []
 }

@@ -1,20 +1,19 @@
 <script>
-
-const SOURCES = [
-        "EGW",
-        "FTD",
-        "GGR",
-        "IDRotF",
-        "PHB",
-        "SCC",
-        "TCE",
-        "XGE"
-    ]
+    import { character } from "../../store/characterStore";
+    const SOURCES = [
+            "EGW",
+            "FTD",
+            "GGR",
+            "IDRotF",
+            "PHB",
+            "SCC",
+            "TCE",
+            "XGE"
+        ]
 
     let spellData = [];
     let selectedSource = "phb";
     let selectedSpell;
-
     
     async function getSpellData() {
         const response = await fetch(`https://5e.tools/data/spells/spells-${selectedSource}.json`);
@@ -22,28 +21,42 @@ const SOURCES = [
         spellData = spells.spell;
         selectedSpell = spellData[0];
     } 
+
+    function addSpell() {
+        console.log(selectedSpell.name);
+        if ($character.spells.filter(spell => spell.name === selectedSpell.name).length === 0) {
+            $character.spells = [...$character.spells, selectedSpell];
+        }
+    } 
+
+    function setSpell(spell) {
+        selectedSpell = spell;
+    }
 </script>
 
-<div>
-    <h2>Spell Finder</h2>
-        <select name="sources" bind:value={selectedSource}>
-            {#each SOURCES as source}
-                <option 
-                    value={source.toLocaleLowerCase()}
-                    selected={source === "PHB" ? true : false}
-                    on:change={() => selectedSource = source.toLocaleLowerCase()}
-                    >
-                    {source}
-                </option>
+<div class="bordered">
+    <h2 class="title2">Spell Finder</h2>
+    <select name="sources" bind:value={selectedSource}>
+        {#each SOURCES as source}
+            <option 
+                value={source.toLocaleLowerCase()}
+                selected={source === "PHB" ? true : false}
+                on:change={() => selectedSource = source.toLocaleLowerCase()}
+                >
+                {source}
+            </option>
+        {/each}
+    </select>
+    <button on:click={getSpellData}>GET SPELLS</button>
+
+    {#if selectedSpell}
+        <select name="spells" bind:value={selectedSpell.name}>
+            {#each spellData.sort((a, b) => a.level < b.level ? -1 : a.level > b.level ? 1 : 0) as spell}
+                <option value={spell.name} on:change={() => setSpell(spell)}>{spell.level}: {spell.name}</option>
             {/each}
         </select>
-        <button on:click={getSpellData}>GET SPELLS</button>
 
-        {#if selectedSpell}
-            <select name="spells" bind:value={selectedSpell.name}>
-                {#each spellData.sort((a, b) => a.level < b.level ? -1 : a.level > b.level ? 1 : 0) as spell}
-                    <option value={spell.name} on:change={() => selectedSpell = spell}>{spell.level}: {spell.name}</option>
-                {/each}
-            </select>
-        {/if}
+        <button on:click={addSpell}>Add Spell</button>
+        <div>{selectedSpell.name}</div>
+    {/if}
 </div>

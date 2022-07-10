@@ -15,6 +15,7 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
         hpMax: data.hpMax,
         hpCurrent: data.hpCurrent,
         inspired: data.inspired,
+        spells: data.spells,
 
         attributes: {
             'str': data.attributes.str, 
@@ -47,7 +48,6 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
         },
     }
 
-    console.log(character);
     return character;
 }
 

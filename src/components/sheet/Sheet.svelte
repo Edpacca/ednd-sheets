@@ -4,7 +4,6 @@
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
     import Spells from "../spells/Spells.svelte";
-    import { character } from "../../store/characterStore";
 </script>
 
 <div class="sheet-wrapper">
@@ -28,8 +27,14 @@
     .sheet-wrapper {
         padding: 2em;
         display: grid; 
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(3, 1fr);
         column-gap: 0.5em;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .sheet-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .attributes {
