@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getSkillBonus } from "../../logic/characterStats";
+    import { getSkillBonus } from "../../logic/dataHandlers";
     import { character } from "../../store/characterStore";
     import Skill from "./component/Skill.svelte";
 </script>

@@ -7,14 +7,14 @@
 </script>
 
 <div class="sheet-wrapper">
-    <div class="attributes box">
+    <!-- <div class="attributes box">
         <Attributes/>
         <Skills/>
         <Bonuses/>
     </div>
     <div class="details box">
         <Details/>
-    </div>
+    </div> -->
     <div class="spells box">
         <Spells/>
     </div>

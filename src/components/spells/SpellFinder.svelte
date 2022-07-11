@@ -1,5 +1,5 @@
 <script>
-    import { character } from "../../store/characterStore";
+    import { spells } from "../../store/spellStore";
     const SOURCES = [
             "EGW",
             "FTD",
@@ -25,8 +25,8 @@
 
     function addSpell() {
         console.log(selectedSpell.name);
-        if ($character.spells.filter(spell => spell.name === selectedSpell.name).length === 0) {
-            $character.spells = [...$character.spells, selectedSpell];
+        if ($spells.filter(spell => spell.name === selectedSpell.name).length === 0) {
+            $spells = [...$spells, selectedSpell];
         }
     } 
 
@@ -36,7 +36,7 @@
 </script>
 
 <div class="bordered">
-    <h2 class="title2">Spell Finder</h2>
+    <h2 class="title2">Title</h2>
     <select name="sources" bind:value={selectedSource}>
         {#each SOURCES as source}
             <option 
@@ -58,6 +58,6 @@
         </select>
 
         <button on:click={addSpell}>Add Spell</button>
-        <div>{selectedSpell.name}</div>
+        <div class="title3">{selectedSpell.description}</div>
     {/if}
 </div>

@@ -1,6 +1,6 @@
 import type { CharacterSheetData } from "../model/interface/CharacterSheetData";
 import type { CharacterData } from "../model/interface/CharacterData";
-import { calcAttributeBonus, calcProficiency } from "./characterStats";
+import { calcAttributeBonus, calcProficiency } from "./dataHandlers";
 
 export function generateCharacterSheetData(data: CharacterData): CharacterSheetData {
     const character: CharacterSheetData = {
@@ -15,7 +15,6 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
         hpMax: data.hpMax,
         hpCurrent: data.hpCurrent,
         inspired: data.inspired,
-        spells: data.spells,
 
         attributes: {
             'str': data.attributes.str, 

@@ -15,5 +15,4 @@ export interface CharacterSheetData {
     hpMax: number;
     hpCurrent: number;
     inspired: boolean;
-    spells: any[];
 }

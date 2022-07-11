@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { calcAttributeBonus } from "../../../logic/characterStats";
+    import { calcAttributeBonus } from "../../../logic/dataHandlers";
     export let value: number;
     export let name: string;
     let mod = calcAttributeBonus(value);
