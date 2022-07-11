@@ -32,6 +32,7 @@
 
     function setSpell(spell) {
         selectedSpell = spell;
+        console.log(spell);
     }
 </script>
 
@@ -51,13 +52,13 @@
     <button on:click={getSpellData}>GET SPELLS</button>
 
     {#if selectedSpell}
-        <select name="spells" bind:value={selectedSpell.name}>
+        <select name="spells" bind:value={selectedSpell} on:change={() => setSpell(selectedSpell)}>
             {#each spellData.sort((a, b) => a.level < b.level ? -1 : a.level > b.level ? 1 : 0) as spell}
-                <option value={spell.name} on:change={() => setSpell(spell)}>{spell.level}: {spell.name}</option>
+                <option value={spell}>{spell.level}: {spell.name}</option>
             {/each}
         </select>
 
         <button on:click={addSpell}>Add Spell</button>
-        <div class="title3">{selectedSpell.description}</div>
+        <div>{selectedSpell.entries}</div>
     {/if}
 </div>

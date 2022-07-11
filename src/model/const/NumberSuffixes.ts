@@ -6,5 +6,6 @@ export const NUMBER_SUFFIXES = {
     5: "th",
     6: "th",
     7: "th",
-    8: "th"
+    8: "th",
+    9: "th"
 }

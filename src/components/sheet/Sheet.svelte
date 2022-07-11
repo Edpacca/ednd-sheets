@@ -18,9 +18,9 @@
     <div class="spells box">
         <Spells/>
     </div>
-    <div class="equipment box">
+    <!-- <div class="equipment box">
         
-    </div>
+    </div> -->
 </div>
 
 <style>
