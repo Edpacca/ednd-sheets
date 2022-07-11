@@ -16,28 +16,23 @@
     let selectedSource = "phb";
     let selectedSpell;
     
-    async function getSpellData() {
+    const getSpellData = async () => {
         const response = await fetch(`https://5e.tools/data/spells/spells-${selectedSource}.json`);
         const spells = await response.json();
         spellData = spells.spell;
         selectedSpell = spellData[0];
     } 
 
-    function addSpell() {
-        console.log(selectedSpell.name);
-        if ($spells.filter(spell => spell.name === selectedSpell.name).length === 0) {
-            $spells = [...$spells, selectedSpell];
-        }
-    } 
-
-    function setSpell(spell) {
-        selectedSpell = spell;
+    const addSpell = () => { if (!$spells.includes(selectedSpell)) $spells = [...$spells, selectedSpell]; } 
+    const setSpell = (spell) => {
         console.log(spell);
+        selectedSpell = spell;
     }
+
 </script>
 
 <div class="bordered">
-    <h2 class="title2">Title</h2>
+    <h2 class="title2">Spell</h2>
     <select name="sources" bind:value={selectedSource}>
         {#each SOURCES as source}
             <option 

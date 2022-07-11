@@ -1,6 +1,9 @@
 <script>
     import SpellLevel from "./SpellLevel.svelte";
     export let spell;
+    let isOpen = false;
+
+    const toggle = () => isOpen = !isOpen;
 </script>
 
 <div class="spell-wrapper">
@@ -13,7 +16,13 @@
         {/if})
     </div>
     <div class="source {spell.source}">{spell.source}</div>
+    <button class="toggle" on:click={toggle}></button>
 </div>
+{#if isOpen}
+    <div class="detail">
+        {spell.entries}
+    </div>
+{/if}
 
 <style>
     .spell-wrapper {
