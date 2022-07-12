@@ -3,4 +3,8 @@
     export let level: number;
 </script>
 
-<span class="detail">{level}<sup>{NUMBER_SUFFIXES[level]}</sup> level</span>
+{#if level > 0}
+    <span class="detail">{level}<sup>{NUMBER_SUFFIXES[level]}</sup> level</span>
+{:else}
+    <span class="detail">cantrip</span>
+{/if}

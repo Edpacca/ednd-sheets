@@ -1,5 +1,6 @@
 
 import type { CharacterData } from "src/model/interface/CharacterData";
+import { SPELLS } from "./spellData";
 
 export const TEST_CHARACTER: CharacterData = {
 
@@ -26,7 +27,5 @@ export const TEST_CHARACTER: CharacterData = {
         'History',
         'Investigation',
         'Animal handling'
-    ],
-
-    spells: []
+    ]
 }

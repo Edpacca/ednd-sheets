@@ -11,7 +11,7 @@ export interface CharacterSheetData {
     readonly proficiencyBonus: number;
     readonly initiative: number
     attributes: Attributes;
-    skills: Skills;
+    skillProficiencies: Skills;
     hpMax: number;
     hpCurrent: number;
     inspired: boolean;

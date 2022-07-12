@@ -25,7 +25,7 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
             'cha': data.attributes.cha,
         },
 
-        skills: {
+        skillProficiencies: {
             'Athletics': data.proficientSkills.includes('Athletics'),
             'Acrobatics': data.proficientSkills.includes('Acrobatics'),
             'Sleight of hand': data.proficientSkills.includes('Sleight of hand'),

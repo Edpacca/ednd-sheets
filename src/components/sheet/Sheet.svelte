@@ -7,20 +7,20 @@
 </script>
 
 <div class="sheet-wrapper">
-    <!-- <div class="attributes box">
+    <div class="attributes box">
         <Attributes/>
         <Skills/>
         <Bonuses/>
     </div>
     <div class="details box">
         <Details/>
-    </div> -->
+    </div>
     <div class="spells box">
         <Spells/>
     </div>
-    <!-- <div class="equipment box">
+    <div class="equipment box">
         
-    </div> -->
+    </div>
 </div>
 
 <style>
@@ -29,6 +29,7 @@
         display: grid; 
         grid-template-columns: repeat(3, 1fr);
         column-gap: 0.5em;
+        row-gap: 0.5em;
     }
 
     @media screen and (max-width: 1100px) {
@@ -47,6 +48,11 @@
         border: 2px solid brown;
         border-radius: 4px;
         padding: 0.5em;
+    }
+
+    .spells {
+        display: grid;
+        grid-template-rows: 1fr;
     }
 
 </style>

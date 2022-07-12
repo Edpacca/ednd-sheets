@@ -11,11 +11,7 @@
     <div class="header">
         <div class="name">{spell.name}</div>
         <div class="level detail">
-            ({#if spell.level === 0}
-                cantrip
-            {:else}
-                <SpellLevel level={spell.level}/>
-            {/if})
+            <SpellLevel level={spell.level}/>
         </div>
         <div class="components">
             {spell.components.v ? "V" : ""}
