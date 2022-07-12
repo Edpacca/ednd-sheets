@@ -23,3 +23,7 @@ body {
     border: 2px solid burlywood;
     border-radius: 4px;
 }
+
+.debug {
+    border: 1px solid green;
+}

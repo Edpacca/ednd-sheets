@@ -6,20 +6,29 @@
     const toggle = () => isOpen = !isOpen;
 </script>
 
-<div class="spell-wrapper">
-    <div class="name">{spell.name}</div>
-    <div class="level detail">
-        ({#if spell.level === 0}
-            cantrip
-        {:else}
-            <SpellLevel level={spell.level}/>
-        {/if})
+
+<div class="spell-wrapper" on:click={toggle}>
+    <div class="header">
+        <div class="name">{spell.name}</div>
+        <div class="level detail">
+            ({#if spell.level === 0}
+                cantrip
+            {:else}
+                <SpellLevel level={spell.level}/>
+            {/if})
+        </div>
+        <div class="components">
+            {spell.components.v ? "V" : ""}
+            {spell.components.s ? "S" : ""}
+            {spell.components.m ? "M" : ""}
+        </div>
+        <div class="source {spell.source}">{spell.source}</div>
     </div>
-    <div class="source {spell.source}">{spell.source}</div>
-    <button class="toggle" on:click={toggle}></button>
+    <div class="footer">
+    </div>
 </div>
 {#if isOpen}
-    <div class="detail">
+    <div class="detail entry">
         {spell.entries}
     </div>
 {/if}
@@ -27,8 +36,17 @@
 <style>
     .spell-wrapper {
         border-bottom: 2px solid burlywood;
-        display: flex;
+
         padding-top: 0.5em;
+    }
+
+    .spell-wrapper:hover {
+        background-color: rgb(255, 245, 232);
+        cursor: pointer;
+    }
+
+    .header {
+        display: flex;
     }
 
     .name {
@@ -39,10 +57,22 @@
         font-size: 0.8em;
     }
 
-    .source {
+    .components {
         margin-left: auto;
+        font-size: 0.75em;
+        font-style: italic;
+        color: rgb(114, 95, 70)
+    }
+
+    .source {
+        margin-left: 0.5em;
         font-style: italic;
         font-size: 0.8em;
+    }
+
+    .entry {
+        margin: 0.5em 0;
+        font-size: 0.9em;
     }
 
     .PHB { color: brown }
