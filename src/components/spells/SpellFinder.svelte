@@ -1,15 +1,13 @@
 <script>
-import { SOURCES } from "../../model/const/Sources";
-
+    import { character } from "../../store/characterStore";
+    import { SOURCES } from "../../model/const/Sources";
     import { spells } from "../../store/spellStore";
-import SpellDataTable from "./SpellDataTable.svelte";
+    import SpellDataTable from "./SpellDataTable.svelte";
     let spellData = [];
     let selectedSource = "phb";
     let selectedSpell;
     
-    const setSource = (source) => {
-        selectedSource = source;
-    }
+    const setSource = (source) => selectedSource = source;
 
     const getSpellData = async () => {
         const response = await fetch(`https://5e.tools/data/spells/spells-${selectedSource}.json`);
@@ -19,14 +17,12 @@ import SpellDataTable from "./SpellDataTable.svelte";
     } 
 
     const addSpell = () => { if (!$spells.includes(selectedSpell)) $spells = [...$spells, selectedSpell]; } 
-    const setSpell = (spell) => {
-        console.log(spell);
-        selectedSpell = spell;
-    }
 
     let isOpen = true;
-
     const toggle = () => isOpen = !isOpen;
+    let hasAllClasses = false;
+
+    const filterByClass = () => spellData.filter(spell => spell.classes.fromClassList.some(c => c.name === $character.class));
 
 </script>
 
@@ -52,6 +48,8 @@ import SpellDataTable from "./SpellDataTable.svelte";
                 {/each}
             </select>
             <button class="button" on:click={getSpellData}>Get spells</button>
+            <input type="checkbox" bind:checked={hasAllClasses}/>
+            <div>All classes</div>
         </div>
 
     
@@ -63,7 +61,11 @@ import SpellDataTable from "./SpellDataTable.svelte";
         </div>
 
         <div class="spell-data">
-            <SpellDataTable spellData={spellData} bind:selectedSpell={selectedSpell}/>
+            <SpellDataTable 
+                spellData={hasAllClasses ? spellData : filterByClass()} 
+                bind:selectedSpell={selectedSpell} 
+                hasAllClasses={hasAllClasses}
+            />
         </div>
 
         {/if}
@@ -139,7 +141,8 @@ import SpellDataTable from "./SpellDataTable.svelte";
         margin-top: 2em;
         border: 1px solid brown;
         height: 50vh;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .spell-details {

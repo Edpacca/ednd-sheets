@@ -4,6 +4,7 @@
     import SpellLevel from "./component/SpellLevel.svelte";
     export let spellData;
     export let selectedSpell;
+    export let hasAllClasses;
     const isInClass = (classes) => classes.some(c => c.name === $character.class);
 </script>
 
@@ -13,12 +14,21 @@
         <th>Spell</th>
     </thead>
     <tbody>
-        {#each sortSpellsByLevel(spellData) as spell}
-        <tr class="spell-row" on:click={() => selectedSpell = spell}>
-            <td class="detail level"><SpellLevel level={spell.level}/></td>
-            <td class={isInClass(spell.classes.fromClassList) ? "" : "invalid"}>{spell.name}</td>
-        </tr>
-    {/each}
+        {#if hasAllClasses}
+            {#each sortSpellsByLevel(spellData) as spell}
+                <tr class="spell-row" on:click={() => selectedSpell = spell}>
+                    <td class="detail level"><SpellLevel level={spell.level}/></td>
+                    <td class={isInClass(spell.classes?.fromClassList) ? "" : "invalid"}>{spell.name}</td>
+                </tr>
+            {/each}
+        {:else}
+            {#each sortSpellsByLevel(spellData) as spell}
+                <tr class="spell-row" on:click={() => selectedSpell = spell}>
+                    <td class="detail level"><SpellLevel level={spell.level}/></td>
+                    <td>{spell.name}</td>
+                </tr>
+            {/each}
+        {/if}
     </tbody>
 </table>
 
