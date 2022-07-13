@@ -27,5 +27,10 @@ export const TEST_CHARACTER: CharacterData = {
         'History',
         'Investigation',
         'Animal handling'
-    ]
+    ],
+
+    doubleProficientSkills: [
+        'History',
+        'Deception',
+    ],
 }

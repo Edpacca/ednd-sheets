@@ -6,7 +6,10 @@
     let spellData = [];
     let selectedSource = "phb";
     let selectedSpell;
+    let isOpen = false;
+    let hasAllClasses = false;
     
+    const toggle = () => isOpen = !isOpen;
     const setSource = (source) => selectedSource = source;
 
     const getSpellData = async () => {
@@ -17,13 +20,7 @@
     } 
 
     const addSpell = () => { if (!$spells.includes(selectedSpell)) $spells = [...$spells, selectedSpell]; } 
-
-    let isOpen = true;
-    const toggle = () => isOpen = !isOpen;
-    let hasAllClasses = false;
-
     const filterByClass = () => spellData.filter(spell => spell.classes.fromClassList.some(c => c.name === $character.class));
-
 </script>
 
 <div>
@@ -101,7 +98,7 @@
     }
 
     .modal {
-        width: calc(2 * ((100vw - 5em) / 3));
+        width: 50vw;
         top: 2em;
         left: 2em;
         position: absolute;
@@ -140,7 +137,7 @@
     .spell-data {
         margin-top: 2em;
         border: 1px solid brown;
-        height: 50vh;
+        height: 40vh;
         overflow-y: scroll;
         overflow-x: hidden;
     }

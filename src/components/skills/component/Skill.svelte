@@ -2,16 +2,27 @@
     import { character } from "../../../store/characterStore";
     export let value;
     export let skill;
-
+    const id = `checkbox-skill-${skill.toLowerCase()}`
+    let checked = $character.skillProficiencies[skill] > 0;
     const getPrefix = (value) => value > 0 ? "+" : "";
     const getValueString = (value) => getPrefix(value) + value;
     
+    // This is not very readable code.
+    // But I love that it works.
+    const setProficiency = () => {
+        const value = ($character.skillProficiencies[skill] + 2) % 3;
+        $character.skillProficiencies[skill] = value;
+        checked = value > 0;
+        document.getElementById(id).click();
+    }
 </script>
 
 <div class="skill-wrapper">
-    <input type="checkbox" class="checkbox" bind:checked={$character.skillProficiencies[skill]}/>
+    <input type="checkbox" class={"checkbox-" + $character.skillProficiencies[skill]} id={id} on:click={setProficiency} checked={checked}/>
     <div class="name">{skill}</div>
     <div class="value num">{getValueString(value)}</div>
+    <div>{$character.skillProficiencies[skill]}</div>
+    <div>{checked}</div>
 </div>
 
 <style>
@@ -55,8 +66,18 @@
         border-radius: 0.08em;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
+    }
+
+    .checkbox-1::before {
         box-shadow: inset 1em 1em brown;
     }
+
+    .checkbox-2::before {
+        box-shadow: inset 1em 1em brown;
+        content: "\9788";
+        color: gold;
+    }
+
 
     input[type="checkbox"]:checked::before {
         transform: scale(1);

@@ -4,6 +4,7 @@
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
     import Spells from "../spells/Spells.svelte";
+    import { character } from "../../store/characterStore";
 </script>
 
 <div class="sheet-wrapper">
@@ -19,7 +20,6 @@
         <Spells/>
     </div>
     <div class="equipment box">
-        
     </div>
 </div>
 

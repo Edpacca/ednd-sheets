@@ -1,6 +1,7 @@
 import type { CharacterSheetData } from "../model/interface/CharacterSheetData";
 import type { CharacterData } from "../model/interface/CharacterData";
 import { calcAttributeBonus, calcProficiency } from "./dataHandlers";
+import type { SkillType } from "src/model/type/SkillType";
 
 export function generateCharacterSheetData(data: CharacterData): CharacterSheetData {
     const character: CharacterSheetData = {
@@ -26,27 +27,35 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
         },
 
         skillProficiencies: {
-            'Athletics': data.proficientSkills.includes('Athletics'),
-            'Acrobatics': data.proficientSkills.includes('Acrobatics'),
-            'Sleight of hand': data.proficientSkills.includes('Sleight of hand'),
-            'Stealth': data.proficientSkills.includes('Stealth'),
-            'Arcana': data.proficientSkills.includes('Arcana'),
-            'History': data.proficientSkills.includes('History'),
-            'Investigation': data.proficientSkills.includes('Investigation'),
-            'Nature': data.proficientSkills.includes('Nature'),
-            'Religion': data.proficientSkills.includes('Religion'),
-            'Animal handling': data.proficientSkills.includes('Animal handling'),
-            'Insight': data.proficientSkills.includes('Insight'),
-            'Medicine': data.proficientSkills.includes('Medicine'),
-            'Perception': data.proficientSkills.includes('Perception'),
-            'Survival': data.proficientSkills.includes('Survival'),
-            'Deception': data.proficientSkills.includes('Deception'),
-            'Intimidation': data.proficientSkills.includes('Intimidation'),
-            'Performance': data.proficientSkills.includes('Performance'),
-            'Persuasion': data.proficientSkills.includes('Persuasion')
+            'Athletics': getProficiencyValue(data, 'Athletics'),
+            'Acrobatics': getProficiencyValue(data, 'Acrobatics'),
+            'Sleight of hand': getProficiencyValue(data, 'Sleight of hand'),
+            'Stealth': getProficiencyValue(data, 'Stealth'),
+            'Arcana': getProficiencyValue(data, 'Arcana'),
+            'History': getProficiencyValue(data, 'History'),
+            'Investigation': getProficiencyValue(data, 'Investigation'),
+            'Nature': getProficiencyValue(data, 'Nature'),
+            'Religion': getProficiencyValue(data, 'Religion'),
+            'Animal handling': getProficiencyValue(data, 'Animal handling'),
+            'Insight': getProficiencyValue(data, 'Insight'),
+            'Medicine': getProficiencyValue(data, 'Medicine'),
+            'Perception': getProficiencyValue(data, 'Perception'),
+            'Survival': getProficiencyValue(data, 'Survival'),
+            'Deception': getProficiencyValue(data, 'Deception'),
+            'Intimidation': getProficiencyValue(data, 'Intimidation'),
+            'Performance': getProficiencyValue(data, 'Performance'),
+            'Persuasion': getProficiencyValue(data, 'Persuasion')
         },
     }
 
     return character;
 }
 
+function getProficiencyValue(data: CharacterData, skill: SkillType) {
+    if (data.doubleProficientSkills.includes(skill))
+        return 2;
+    else if (data.proficientSkills.includes(skill))
+        return 1;
+    else
+        return 0;
+}
