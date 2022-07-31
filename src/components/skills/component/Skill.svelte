@@ -59,16 +59,20 @@
 
     input[type="checkbox"]::before {
         content: "";
-        width: 0.65em;
-        height: 0.65em;
+        width: 0.65rem;
+        height: 0.65rem;
         border-radius: 0.08em;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
-        box-shadow: inset 1em 1em brown;
+        background-color: brown;
+        font-size: 0.65em;
     }
 
     input[type="checkbox"].checkbox-2::before {
-        content: "\2725";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "\2726";
         color: gold;
     }
 
