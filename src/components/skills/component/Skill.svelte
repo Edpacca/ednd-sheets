@@ -21,8 +21,6 @@
     <input type="checkbox" class={"checkbox-" + $character.skillProficiencies[skill]} id={id} on:click={setProficiency} checked={checked}/>
     <div class="name">{skill}</div>
     <div class="value num">{getValueString(value)}</div>
-    <div>{$character.skillProficiencies[skill]}</div>
-    <div>{checked}</div>
 </div>
 
 <style>
@@ -66,18 +64,13 @@
         border-radius: 0.08em;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
-    }
-
-    .checkbox-1::before {
         box-shadow: inset 1em 1em brown;
     }
 
-    .checkbox-2::before {
-        box-shadow: inset 1em 1em brown;
-        content: "\9788";
+    input[type="checkbox"].checkbox-2::before {
+        content: "\2725";
         color: gold;
     }
-
 
     input[type="checkbox"]:checked::before {
         transform: scale(1);

@@ -27,7 +27,7 @@
     .sheet-wrapper {
         padding: 2em;
         display: grid; 
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 25% 1fr 1fr;
         column-gap: 0.5em;
         row-gap: 0.5em;
     }
@@ -40,7 +40,7 @@
 
     .attributes {
         display: grid;
-        grid-template-columns: 10% 1fr 20%;
+        grid-template-columns: 1fr 13rem 1fr;
         column-gap: 0.5em;
     }  
     

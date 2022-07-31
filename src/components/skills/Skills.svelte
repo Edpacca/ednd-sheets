@@ -28,7 +28,6 @@
 
 <style>
     .skills-wrapper {
-        margin-left: 0.5em;
         display: grid;
         grid-template-rows: repeat(1fr);
     }
