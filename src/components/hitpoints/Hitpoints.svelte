@@ -55,6 +55,6 @@
         font-weight: 600;
         text-align: center;
         color: brown;
-        margin-top: 0.1em;
+        margin-top: 0.4em;
     }
 </style>

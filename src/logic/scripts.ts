@@ -46,6 +46,8 @@ export function generateCharacterSheetData(data: CharacterData): CharacterSheetD
             'Performance': getProficiencyValue(data, 'Performance'),
             'Persuasion': getProficiencyValue(data, 'Persuasion')
         },
+
+        currency: data.currency
     }
 
     return character;

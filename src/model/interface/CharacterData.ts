@@ -1,6 +1,7 @@
 import type { Class } from "../type/ClassType";
 import type { SkillType } from "../type/SkillType";
 import type { Attributes } from "./Attributes";
+import type { Currency } from "./Currency";
 
 export interface CharacterData {
     name: string;
@@ -14,4 +15,5 @@ export interface CharacterData {
     hpMax: number;
     hpCurrent: number;
     inspired: boolean;
+    currency: Currency
 }

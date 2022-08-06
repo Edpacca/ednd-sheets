@@ -4,7 +4,7 @@
     import Skills from "../skills/Skills.svelte";
     import Bonuses from "../bonuses/Bonuses.svelte";
     import Spells from "../spells/Spells.svelte";
-    import { character } from "../../store/characterStore";
+    import Equipment from "../inventory/Inventory.svelte";
 </script>
 
 <div class="sheet-wrapper">
@@ -19,9 +19,12 @@
     <div class="spells box">
         <Spells/>
     </div>
-    <div class="equipment box">
-    </div>
+
 </div>
+<div class="equipment-wrapper">
+    <Equipment/>
+</div>
+
 
 <style>
     .sheet-wrapper {
@@ -44,6 +47,9 @@
         column-gap: 0.5em;
     }  
     
+    .equipment-wrapper {
+        padding: 0 2em;
+    }
     .box {
         border: 2px solid brown;
         border-radius: 4px;

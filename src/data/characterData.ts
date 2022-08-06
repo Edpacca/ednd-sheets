@@ -33,4 +33,12 @@ export const TEST_CHARACTER: CharacterData = {
         'History',
         'Deception',
     ],
+
+    currency: {
+        'cp': 24,
+        'sp': 10,
+        'gp': 45,
+        'pp': 0,
+        'ep' : 0
+    }
 }

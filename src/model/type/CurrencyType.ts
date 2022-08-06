@@ -1,0 +1,1 @@
+export type CurrencyType = 'cp' | 'sp' | 'gp' | 'pp'

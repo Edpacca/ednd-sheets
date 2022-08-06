@@ -5,6 +5,7 @@
 
 <div class="inspiration-wrapper">
     <input type="checkbox" bind:checked={$character.inspired}/>
+    <div class="text detail">Inspired</div>
 </div>
 
 <style>
@@ -33,5 +34,13 @@
 
     input[type="checkbox"]:checked::before {
         transform: scale(1);
+    }
+
+    .text {
+        font-size: 0.9em;
+        font-weight: 600;
+        text-align: center;
+        color: brown;
+        margin-top: 0.2em;
     }
 </style>

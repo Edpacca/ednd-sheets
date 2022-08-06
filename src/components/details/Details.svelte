@@ -2,8 +2,9 @@
     import { character } from "../../store/characterStore";
     import Hitpoints from "../hitpoints/Hitpoints.svelte";
     import Inspiration from "../inspiration/Inspiration.svelte";
-    // const imageUrl = "https://www.dndbeyond.com/avatars/12070/813/1581111423-33548730.jpeg?width=150&height=150&fit=crop&quality=95&auto=webp";
-    import helmet from '../../../../icons/helmet.svg';
+import Speed from "../Speed/Speed.svelte";
+    const imageUrl = "https://www.dndbeyond.com/avatars/12070/813/1581111423-33548730.jpeg?width=150&height=150&fit=crop&quality=95&auto=webp";
+    // import helmet from '../../../../icons/helmet.svg';
 </script>
 
 <div class="details-wrapper bordered">
@@ -13,10 +14,11 @@
         <div class="hp-inspiration-wrapper">
             <Hitpoints />
             <Inspiration />
+            <Speed />
         </div>
     </div>
     <div class="image-wrapper">
-        <img src={helmet} alt="character" class="image"/>
+        <img src={imageUrl} alt="character" class="image"/>
         <div style="--hp-height: {(150 - 150 * $character.hpCurrent / $character.hpMax).toString() + "px"}" class="hp-blood"/>
     </div>
 </div> 
@@ -53,7 +55,7 @@
     .hp-inspiration-wrapper {
         margin-top: 0.5em;
         display: grid;
-        grid-template-columns: 50% 3em;
+        grid-template-columns: 50% 3em 3em;
         grid-template-rows: 3em;
         column-gap: 0.5em;
     }

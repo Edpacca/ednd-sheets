@@ -15,7 +15,8 @@
 
     <Bonus name="Initiative" mod={$character.initiative}/>
     <Bonus name="Proficiency" mod={$character.proficiencyBonus}/>
-    <div class="box">
+    
+    <!-- <div class="box">
         <div class="name">Speed</div>
         <div class="mod num">35<span class="unit">ft.</span></div>
     </div>
@@ -24,7 +25,7 @@
         <div class="">Poison</div>
         <div class="name">Immunities</div>
         <div class="">None</div>
-    </div>
+    </div> -->
 </div>
 
 <style>
