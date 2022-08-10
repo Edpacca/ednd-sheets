@@ -1,12 +1,12 @@
 <script lang="ts">
-import type { CurrencyType } from "src/model/type/CurrencyType";
+    import type { CurrencyType } from "../../model/type/CurrencyType";
     export let value: Number;
     export let name: CurrencyType;
-    export let icon;
+    export let icon: string;
 </script>
 
 <div class="coin-wrapper">
-    <input bind:value={value} placeholder={value.toString()}/>
+    <input type=number min=0 bind:value={value} placeholder={value?.toString()}/>
     <div class="title3">{name}</div>
     <img src={icon} alt={name}/>
 </div>
@@ -30,6 +30,7 @@ import type { CurrencyType } from "src/model/type/CurrencyType";
 
     img {
         width: 20%;
-        margin-top: 0.2em;
+        margin: 0.2em;
+        cursor: pointer;
     }
 </style>
